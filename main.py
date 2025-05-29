@@ -17,4 +17,3 @@ df_final = reader.load_all()
 print(df_final)
 
 
-asd
