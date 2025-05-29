@@ -35,8 +35,6 @@ Actualmente se soportan rutas locales, pero el diseño permite extender fácilme
 - Bases de datos SQL/NoSQL
 - Archivos Excel, JSON, etc.
 
----
-
 #### 🗃️ UI (Decorator Pattern)
 La función `pretty_print_df` se usa como un decorador para embellecer la salida en la línea de comandos.
 
