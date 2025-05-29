@@ -39,6 +39,16 @@ class ValidatorBuilder:
                 return f"Nulls in columns: {nulls[nulls].index.tolist()}"
         self.rules.append(rule)
         return self
+    
+    def with_safe_timestamp_conversion(self, column):
+        def rule(df):
+            try:
+                df[column] = pd.to_datetime(df[column])
+            except Exception as e:
+                return f"Error converting {column} to datetime: {str(e)}"
+        self.rules.append(rule)
+        return self
+
 
     def build(self):
         return Validator(self.rules)

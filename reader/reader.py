@@ -44,7 +44,6 @@ class BatchReader:
     def __init__(self, sources: list[dict], validator: IDataValidator):
         self.sources = sources
         self.validator = validator
-
     def load_all(self) -> DataFrame:
         dfs = []
 
